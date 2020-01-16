@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Challenge 5</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700i|Raleway&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+	</head>
+
+	<body>
+        <header>
+            <h1>HTML and CSS Refresher Challenges</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">HTML Basics</a></li>
+                <li><a href="cssbasics.html">CSS Basics</a></li>
+                <li><a href="layout.html">Page Layout</a></li>
+                <li><a href="responsive.html">Responsive Design</a></li>
+            </ul>
+        </nav>
+        
+        <div class="main">
+            <article>
+                <h2>About Media Queries</h2>
+                <p>Media quieries are used to define different style rules depending on the media type.
+                Media queries are especially important today due to the many devices and screen sizes that require
+                adjustments to effectively display a webpage to a user. Media quieries can check the
+                width and height of the viewport and of the device, its orientation, and the resolution.
+                A min-width media query will apply a style to a if a viewport is a certain width or
+                larger while a max-width media query will apply to a style if a viewport is a 
+                certain width or smaller.</p>
+                <p> We start with developing for smaller screens and then add layouts for larger screens with
+                media queries as we use a mobile-first display approach. It's usually easier to
+                create for smaller screens first and then move onto larger screens because the size of the 
+                screen increases, and our content will need smaller adjustments to account for the
+                increased space. Also, many users will use phones or tablets which have smaller display screens</p>
+            </article>
+            <article>
+                <h2>Relative Units</h2>  
+                <p>Relative units are different from fixed units such as pixels. Relative units specify a 
+                length in relation to another length property. Relative units are used in web design since 
+                they are more scalable to different mediums and screen sizes. There are several different
+                relative units. "em" is relative to the font size of an element; 5em would be 5 times the
+                size of the current font. One can also use percentages (%) which are relative to the parent
+                element. "vw" and "vh" are relative to the viewport's width and height, respectively.</p>
+            </article>
+            <article class="bg-img">
+                <h2>Meta Viewport Tag</h2>
+                <p>The meta viewport tag is added to the head element in the HTML page. It allows the designer
+                to take control of the viewport. It will instruct the browser to follow the screen width
+                of the device. Wihout the meta viewport tag, the content of a webpage is often rendered
+                incorrectly or ineffectively. Rather than wrapping around, it will scale down to fit the
+                smaller screen size. With the meta viewport tag, text will wrap around and be sized 
+                appropriately and images will take up the full width of the page.</p>
+            </article>
+        </div>  
+        
+        <footer>
+            <p>Page by Minhee Son</p>
+            <p>Checked by Sarrah Solomon</p>
+            <p><a href="http://validator.w3.org/check?uri=referer">Valid HTML</a></p>
+        </footer>      
+	</body>
+</html>

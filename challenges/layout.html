@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Challenge 4</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700i|Raleway&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+	</head>
+
+	<body>
+        <header>
+            <h1>HTML and CSS Refresher Challenges</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">HTML Basics</a></li>
+                <li><a href="cssbasics.html">CSS Basics</a></li>
+                <li><a href="layout.html">Page Layout</a></li>
+                <li><a href="responsive.html">Responsive Design</a></li>
+            </ul>
+        </nav>
+        
+        <div class="main">
+            <article>
+                <h2>Structure, Phrasing, and Display</h2>
+                <p>The difference between structural (block) elements and phrasing (inline) elements
+                in HTML is that they are displayed differently. By default, a block element will 
+                start on a new line and take up the full width that's available. An example of a block
+                element is a div element. On the other hand, an inline element will not start on a new line
+                and only takes up as much width as it needs. An example of an inline element is a span
+                element.</p>
+                <p>The CSS display property has more than 20 possible values, including inline, block,
+                flex, grid, and flex. The display value will specify how the element will be rendered
+                on the page. Using these display values, elements can be displayed as different containers
+                such as flex or grid containers and in different widths such as inline and block.</p>
+            </article>
+            <article>
+                <h2>Box Model</h2>  
+                <p>The CSS box model views all HTML elments as content wrapped in more boxes. From 
+                inside out, the boxes are content, padding, border, and margin. The content consists
+                of the text and images of the HTML element. The padding is the area directly around
+                the content and is transparent. The border wraps around the content and padding; the 
+                margin wraps around the border and is also transparent.</p>
+                <p>The box model can be changed with box-sizing in CSS as this property includes 
+                the padding and border in an element's total width and height. By default, actual width
+                and height of element's are the sum of its width/height + padding + border.
+                As a result, seting width/height often makes the element appear larger than you want.
+                This is because the HTML element's border and padding are added to the specified 
+                dimension.</p>
+                <img src="images/box model.jpg" alt="box model" width="600px" height="450px">
+            </article>
+            <article class="bg-img">
+                <h2>Background Images</h2>
+                <p>With CSS or HTML, one can set the background of an element can be set to a
+                color or an image. In CSS, background images can be specified with the 
+                background-image value. The value consists of the URL to the image contained in 
+                url('insertULRtoImage'). Multiple images can be specified by listing each URL
+                and separate them with commas. By default, the background-image is placed in the
+                top left corner of an element and repeated vertically & horizontally to fit its 
+                container. If the image is unavailable, it will display a background color so it's
+                best that you specify a background-color value just in case. Background images
+                are different from images loaded onto the webpage with img tags as they are not
+                HTML elements but are used to style HTML elements</p>
+            </article>
+        </div>  
+        
+        <footer>
+            <p>Page by Minhee Son</p>
+            <p>Checked by Sarrah Solomon</p>
+            <p><a href="http://validator.w3.org/check?uri=referer">Valid HTML</a></p>
+        </footer>      
+	</body>
+</html>

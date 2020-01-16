@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Challenge 3</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700i|Raleway&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+	</head>
+
+	<body>
+        <header>
+            <h1>HTML and CSS Refresher Challenges</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">HTML Basics</a></li>
+                <li><a href="cssbasics.html">CSS Basics</a></li>
+                <li><a href="layout.html">Page Layout</a></li>
+                <li><a href="responsive.html">Responsive Design</a></li>
+            </ul>
+        </nav>
+        
+        <div class="main">
+            <article>
+                <h2>Inheritance in CSS</h2>
+                <p>Inheritance in CSS describes how elements inherit styles from its parent containers.
+                    If no value is specified for a property of an element, it will inherit it from its parent containers.
+                    For example, if a div container contains a paragraph, setting the font color of div will apply to all
+                    the elements inside the div. Thus, the font color of the paragraph will also change.</p>
+            </article>
+            <article>
+                <h2>Specificity in CSS</h2>
+                <p>Specificity in CSS describes how elements inherit styles that are the most specific.
+                    If multiple CSS styles apply to an element, the more specific style will be taken.
+                    For example, say there is some body element which contains a article which contains a paragraph.
+                    If the body is styled with blue text, the article with red text, and the paragraph with green text,
+                    the paragraph will take on the style of the most specific CSS and have green text.</p>
+            </article>
+            <article>
+                <h2>ID and Class Attributes</h2>
+                <p>The difference between ID and class is that ID's are unique to the element while classes describe
+                    a larger category of elements. While multiple elements can have the same class name, ID's are usually
+                    used only once per HTML page. Classes are kind of like more specific tags while ID's are like names.</p>
+            </article>
+        </div>  
+        
+        <footer>
+            <p>Page by Minhee Son</p>
+            <p>Checked by Sarrah Solomon</p>
+            <p><a href="http://validator.w3.org/check?uri=referer">Valid HTML</a></p>
+        </footer>      
+	</body>
+</html>
