@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>JavaScript Basic Challenges: Challenge 8</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>JavaScript Basic Challenges</h1>
+            <h2>Challenge 8</h2>
+        </header>
+        <script>
+            var number = prompt("Enter a whole number", "");
+            if (number < 10) {
+                console.log("You have entered a number smaller than 10");
+                for (var i = 0; i < 10; ++i) {
+                    if (i == number) {
+                        console.log(`Here is a ${i} <--- This is your number!`);
+                    } else {
+                        console.log(`Here is a ${i}`);
+                    }
+                }
+            } else if (number >= 10) {
+                console.log("You have enetered a big number");
+            } else {
+                console.log("ERROR: you didn't enter a number!");
+            }
+        </script>
+    </body>
+</html>

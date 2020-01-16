@@ -1,0 +1,62 @@
+<!doctype html>
+
+<html>
+    <head lang="en">
+        <meta charset="utf-8">
+        <title>String Methods</title>
+    </head>
+    <body>
+        <header>
+            <h1>String Methods</h1>
+        </header>
+
+        <script>
+            var str1 = "capitalize the first letter of each word\n";
+
+            console.log(str1[0] = str1[0].toUpperCase());
+            for (var i = 1; i < str1.length; ++i) { 
+                if (str1[i - 1] === " ") {
+                    console.log(str1[i].toUpperCase());
+                } else {
+                    console.log(str1[i]);
+                }
+            }
+        </script>
+
+        <script>
+            var str2 = "capitalize every other letter\n";
+
+            for (var i = 0; i < str2.length; ++i) {
+                if (i % 2 === 0) {
+                    console.log(str2[i]);
+                } else {
+                    console.log(str2[i].toUpperCase());
+                }
+            }
+        </script>
+
+        <script>
+            var str3 = "capitalize all vowels\n";
+
+            for (var i = 0; i < str3.length; ++i) {
+                if (str3[i] === "a" || str3[i] === "e" || str3[i] === "o" || str3[i] === "i" ||str3[i] === "u") {
+                    console.log(str3[i].toUpperCase());
+                } else {
+                    console.log(str3[i]);
+                }
+            }
+        </script>
+
+        <script>
+            var str4 = "reverse the letters of each word\n";
+            var start = 0;
+            for (var i = 0; i < str4.length; ++i) {
+                if (str4[i] === " ") {
+                    // hit end of word
+                    // reverse the 
+                }
+            }
+        </script>
+
+    </body>
+</html>
