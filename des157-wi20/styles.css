@@ -1,54 +1,80 @@
-header, footer {
-    padding: 1em;
-}
-
-header, h1, h2, h3 {
-    color: black; 
-    font-family: 'Noto Serif', serif;
-}
-
-header h1 {
-    font-size: 4em;
-}
-
 body {
-    color: black;
-    font-family: 'Noto Sans', sans-serif;
+    color: #666666;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    width: 800px;
+    padding: 2% 0% 0% 2%;
+    line-height: 1.6;
+    background: #ffffff;
+    margin: 0 auto;
 }
 
-main {
-    margin-left: 3em;
-    margin-right: 3em;
-    padding: 1.6em;
-    min-width: 800px;
-    max-width: 1200px;
-    display: flex;
+#mySketch {
+    width: 800px;
+    height: 250px;
+    border: 1px solid darkgray;
 }
 
-footer {
-    text-align: center;
+a {
+    text-decoration: none;
+    color: #999999;
+}
+
+a:hover {
+    transition: 0.25s ease-in-out;
+    color: white;
+}
+
+
+header h1, header h2 {
+    font-size: 200%;
+    color: #333333; 
+    font-family: 'Muli', sans-serif;
+    line-height: 1;
+    font-weight: 300;
 }
 
 section h3 {
-    margin: 0;
+    margin: 0% 0% 1% 0%;
+    font-size: 150%;
+    font-family: 'Muli', sans-serif;
+    line-height: 1;
+    font-weight: 300;
+}
+
+hr {
+    margin: 3% 0% 3% 0%;
+    border: 0.4px solid lightgray;
+}
+
+main {
+    justify-content: center;
+    grid-template-columns: 30ch 30ch 30ch;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    display: grid;
+}
+
+footer {
+    text-align: left;
+    padding: 2% 0% 5% 0%;
 }
 
 section {
-    width: 31%;
-    background-color: #dfdfdf;
-    border-radius: 16px;
+    background-color: whitesmoke;
+    border-radius: 4px;
     margin: 1em;
     padding: 1.6em;
 }
 
-@media only screen and (min-width: 1200px) {
-    main {
-        margin-left: auto;
-        margin-right: auto;
-    }
+ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 825px) {
     main {
         overflow-x: scroll;
     }
