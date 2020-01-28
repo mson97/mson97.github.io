@@ -10,12 +10,6 @@ body {
     margin: 0 auto;
 }
 
-#mySketch {
-    width: 800px;
-    height: 250px;
-    border: 1px solid whitesmoke;
-}
-
 a {
     text-decoration: none;
     color: #000000;
@@ -35,9 +29,14 @@ header h1 {
     font-weight: 300;
 }
 
-section h3 {
+home {
+    font-size: 14px;
+}
+
+h2 {
     margin: 0% 0% 1% 0%;
-    font-size: 160%;
+    color: #333333;
+    font-size: 200%;
     font-family: 'Muli', sans-serif;
     line-height: 1;
     font-weight: 300;
@@ -51,11 +50,11 @@ hr {
 
 main {
     justify-content: center;
-    grid-template-columns: 28% 28% 28%;
     margin-left: auto;
     margin-right: auto;
-    flex-wrap: wrap;
+    padding: 3% 0% 3% 0%;
     display: grid;
+    flex: wrap;
 }
 
 footer {
@@ -63,16 +62,21 @@ footer {
     padding: 2% 0% 5% 0%;
 }
 
-section {
+article {
+    justify-content: center;
+    max-width: 90ch;
     background-color: whitesmoke;
     border-radius: 4px;
-    margin: 1em;
-    padding: 1.8em;
+    margin: 2%;
+    padding: 3%;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+article img {
+    padding: 1em;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 @media only screen and (max-width: 825px) {
