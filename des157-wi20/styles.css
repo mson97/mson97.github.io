@@ -1,16 +1,19 @@
 header, footer {
     padding: 1em;
-    background-color: #ffd0d6;
 }
 
 header, h1, h2, h3 {
-    color: #c73a3a; 
-    font-family: 'Roboto', sans-serif;
+    color: black; 
+    font-family: 'Noto Serif', serif;
+}
+
+header h1 {
+    font-size: 4em;
 }
 
 body {
     color: black;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 main {
@@ -32,7 +35,7 @@ section h3 {
 
 section {
     width: 31%;
-    background-color: rgb(255, 213, 213);
+    background-color: #dfdfdf;
     border-radius: 16px;
     margin: 1em;
     padding: 1.6em;
