@@ -5,7 +5,7 @@ body {
     font-weight: 300;
     width: 800px;
     padding: 2% 0% 0% 2%;
-    line-height: 1.6;
+    line-height: 1.8;
     background: #ffffff;
     margin: 0 auto;
 }
@@ -13,17 +13,17 @@ body {
 #mySketch {
     width: 800px;
     height: 250px;
-    border: 1px solid darkgray;
+    border: 1px solid whitesmoke;
 }
 
 a {
     text-decoration: none;
-    color: #999999;
+    color: #000000;
 }
 
 a:hover {
     transition: 0.25s ease-in-out;
-    color: white;
+    color: lightcoral;
 }
 
 
@@ -37,20 +37,21 @@ header h1, header h2 {
 
 section h3 {
     margin: 0% 0% 1% 0%;
-    font-size: 150%;
+    font-size: 160%;
     font-family: 'Muli', sans-serif;
     line-height: 1;
     font-weight: 300;
 }
 
 hr {
-    margin: 3% 0% 3% 0%;
-    border: 0.4px solid lightgray;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border: 1px solid whitesmoke;
 }
 
 main {
     justify-content: center;
-    grid-template-columns: 30ch 30ch 30ch;
+    grid-template-columns: 28% 28% 28%;
     margin-left: auto;
     margin-right: auto;
     flex-wrap: wrap;
@@ -66,7 +67,7 @@ section {
     background-color: whitesmoke;
     border-radius: 4px;
     margin: 1em;
-    padding: 1.6em;
+    padding: 1.8em;
 }
 
 ul {
