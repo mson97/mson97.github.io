@@ -15,46 +15,49 @@ img {
 
 body {
 	background: #ffffff;;
-	color:#333333;
-	font-family: 'Work Sans', sans-serif;
+	color:#3d3d3d;
+	font-family: 'Didact Gothic', sans-serif;
 	font-weight: 300;
+	font-size: 14px;
 	padding:30px 0;
 }
 
 #page {
-	width:980px;
+	width: 800px;
 	margin:auto;
 }
 
 header {
-	border-bottom: 3px solid #000000;
-	padding-bottom:20px;
+	border-bottom: 0.6px solid #999999;
+	padding-bottom: 3%;
 }
 
 header, footer {
-	margin: 0 10px;
+	margin: 0 2%;
 	overflow:hidden;
 }
+
 section {
-	padding:20px 0;
+	padding: 20px 0;
 	overflow:hidden;
 }
 
 footer {
-	border-top: 3px solid #666666;
-	padding-top:20px;
+	border-top: 0.6px solid #999999;
+	padding-top: 3%;
 }
 
 #about {
-	width:66.6666%;
-	padding:10px;
-	float:left;
+	width: 60%;
+	padding: 1em;
+	float: left;
 }
 
 #projects {
-	width: 33.33%;
+	width: 40%;
 	float:left;
-	padding:10px;
+	margin-top: 5%;
+	padding: 1em;
 }
 
 .alignleft {
@@ -65,18 +68,17 @@ footer {
 /************ typography *************/
 
 h1, h2, h3 {
-	font-family: 'Work Sans', sans-serif;
-	font-weight: 600;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
 	margin-bottom:.5em;
 }
 
 h1 {
-	font-size:150%;
-	text-transform:uppercase;
+	font-size: 150%;
 }
 
 header h1 {
-	font-size:500%;
+	font-size: 300%;
 	margin-bottom:.1em;
 }
 
@@ -87,7 +89,7 @@ p {
 
 ul, ol {
 	margin-bottom:1em;
-	list-style-type:disc;
+	list-style-type: none;
 	padding-left:1.2em;
 }
 
@@ -105,14 +107,13 @@ strong {
 
 a {
 	text-decoration:none;
-	font-weight: 400;
-	color:#f7dd97;
+	color:#666666;
 }
 
 a:hover {
 	transition: 0.3s ease-in;
-	color: #000000;
-	background-color: #f7dd97;
+	color: #999999;
+	background-color: lightgoldenrodyellow;
 }
 
 @media only screen and (max-width: 980px) {
@@ -131,5 +132,6 @@ a:hover {
 }
 	
 #pfp {
-	max-width: 100%;
+	max-width: 90%;
+	border: 1px solid #999999;
 }
