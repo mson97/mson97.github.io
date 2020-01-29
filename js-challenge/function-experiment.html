@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Function Experimentation</title>
+</head>
+<body>
+    <h1>Javascript Function Experimentation</h1>
+
+    <script>
+
+        function randomInt(min, max){
+                return Math.floor( (max - min + 1) * Math.random()) + min;
+        }
+        
+        function vowel_count(word) {
+            var count = 0;
+            for (var i = 0; i < word.length; ++i) {
+                if (word[i] === "a" || word[i] === "e" || word[i] === "i" || word[i] === "o" || word[i] === "u") {
+                    ++count;
+                }
+            }
+            return count;
+        }
+
+        function contains_int(word) {
+            for (var i = 0; i < word.length; ++i) {
+                if (parseInt(word[i])) {
+                    console.log("This word contains a number!\n");
+                    return true;
+                }
+            }
+            console.log("This word contains no numbers.\n");
+            return false;
+        }
+
+        function greet_user (name) {
+            var greetings = ["Hello", "Greetings", "Salutations", "Bonjour", "Hola", "Konichiwa"];
+            var goodbyes = ["Goodbye", "Adios", "Au revoir", "Sayonara"];
+            if (contains_int(name)) {
+                console.log(`You have entered an invalid name.\n`);
+                console.log(`${goodbyes[randomInt(0, goodbyes.length - 1)]}.`);
+            } else {
+                var num = randomInt(0, greetings.length - 1);
+                console.log(`${greetings[randomInt(0, greetings.length -1 )]}, ${name}.\n`);
+                console.log(`Your name contains ${vowel_count(name)} vowels!\n`);
+            }
+        }
+
+    </script>
+
+    <script>
+        var u_name = prompt("Enter your name: ", "");
+        greet_user(u_name);
+
+    </script>
+    
+</body>
+</html>
