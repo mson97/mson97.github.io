@@ -146,7 +146,7 @@ a:hover {
 	
 #pfp {
 	padding: 4% 4% 12% 4%;
-	border: 0.6px solid #999999;
+	border: 2px solid whitesmoke;
 }
 
 #pfp_caption {
@@ -154,6 +154,8 @@ a:hover {
 	font-size: 85;
 	color: #999999;
 }
+
+/* Source: https://christopheraue.net/design/fading-pages-on-load-and-unload */
 
 #fader {
     position: fixed;
