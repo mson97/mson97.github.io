@@ -19,21 +19,23 @@ body {
 	font-family: 'Didact Gothic', sans-serif;
 	font-weight: 300;
 	font-size: 14px;
-	padding:30px 0;
+	padding: 30px 0;
 }
+
+
 
 #page {
 	width: 800px;
-	margin:auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 header {
-	border-bottom: 0.6px solid #999999;
-	padding-bottom: 3%;
+	margin: 2% 2% 0% 2%;
 }
 
 header, footer {
-	margin: 0 2%;
+	
 	overflow:hidden;
 }
 
@@ -43,20 +45,21 @@ section {
 }
 
 footer {
+	margin: 0% 2%;
 	border-top: 0.6px solid #999999;
 	padding-top: 3%;
 }
 
 #about {
-	width: 60%;
+	width: 70%;
 	padding: 1em;
 	float: left;
 }
 
 #projects {
-	width: 40%;
+	width: 30%;
 	float:left;
-	margin-top: 5%;
+	margin-top: 15%;
 	padding: 1em;
 }
 
@@ -74,12 +77,27 @@ h1, h2, h3 {
 }
 
 h1 {
-	font-size: 150%;
+	font-size: 180%;
+}
+
+h2 {
+	font-size: 120%;
+	padding-bottom: 2%;
+	border-bottom: 0.5px solid #999999;
 }
 
 header h1 {
-	font-size: 300%;
+	font-size: 400%;
 	margin-bottom:.1em;
+}
+
+header h2 {
+	color: #999999;
+}
+
+header h2:hover {
+	transition: 0.3s ease-in-out;
+	color: #000000;
 }
 
 p {
@@ -87,17 +105,12 @@ p {
 	margin-bottom:1em;
 }
 
-ul, ol {
+ul {
 	margin-bottom:1em;
 	list-style-type: none;
-	padding-left:1.2em;
 }
 
-ol {
-	list-style-type:decimal;
-}
-
-li {
+ul li {
 	margin-bottom:.5em;
 }
 
@@ -112,8 +125,8 @@ a {
 
 a:hover {
 	transition: 0.3s ease-in;
-	color: #999999;
-	background-color: lightgoldenrodyellow;
+	color: #ffffff;
+	background-color: rgb(255, 218, 132);
 }
 
 @media only screen and (max-width: 980px) {
@@ -132,6 +145,45 @@ a:hover {
 }
 	
 #pfp {
-	max-width: 90%;
-	border: 1px solid #999999;
+	padding: 4% 4% 12% 4%;
+	border: 0.6px solid #999999;
+}
+
+#pfp_caption {
+	margin-top: 0;
+	font-size: 85;
+	color: #999999;
+}
+
+#fader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	z-index: 999999;
+	pointer-events: none;
+	background: white;
+	animation-duration: 1.6s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fade-out {
+    from { opacity: 1 }
+      to { opacity: 0 }
+}
+
+@keyframes fade-in {
+    from { opacity: 0 }
+      to { opacity: 1 }
+}
+
+#fader.fade-out {
+    opacity: 0;
+    animation-name: fade-out;
+}
+
+#fader.fade-in {
+    opacity: 1;
+    animation-name: fade-in;
 }

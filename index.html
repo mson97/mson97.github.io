@@ -1,11 +1,12 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Minhee Son</title>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Roboto:300&display=swap" rel="stylesheet">
-<link href="styles.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Minhee Son</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Roboto:300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/ico" href="./favicon.ico">
+    <link href="styles.css" rel="stylesheet">
 
 <!-- Needed for mobile devices to not zoom out automatically-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,56 +14,105 @@
 </head>
 
 <body>
+    <svg id="fader"></svg>
+    <script>
+        fadeInPage();
+
+        function fadeInPage() {
+            if (!window.AnimationEvent) { return; }
+            var fader = document.getElementById('fader');
+            fader.classList.add('fade-out');
+        }
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!window.AnimationEvent) { return; }
+            var anchors = document.getElementsByTagName('a');
+            for (var idx=0; idx<anchors.length; idx+=1) {
+            if (anchors[idx].hostname !== window.location.hostname ||
+                anchors[idx].pathname === window.location.pathname) {
+                continue;
+            }
+        
+            anchors[idx].addEventListener('click', function(event) {
+                var fader = document.getElementById('fader'),
+                    anchor = event.currentTarget;
+                
+                var listener = function() {
+                    window.location = anchor.href;
+                    fader.removeEventListener('animationend', listener);
+                };
+                
+                fader.addEventListener('animationend', listener);
+                event.preventDefault();
+                fader.classList.add('fade-in');
+            });
+            }
+        });
+
+    window.addEventListener('pageshow', function (event) {
+        if (!event.persisted) {
+            return;
+        }
+    var fader = document.getElementById('fader');
+    fader.classList.remove('fade-in');
+    });
+    </script>
 
 	<div id="page">
     
    	  <header>
         
-        	<h1>Minhee Son</h1>
+            <h1>minhee son</h1>
             <h2>software developer + novice designer + interdisciplinary thinker</h2>
         
         </header>
         
         <section>
         	<article id="about">
-            	<h1>About Me</h1>
-                <p><img src="images/woo.jpg" alt="photo" class="alignleft" id="pfp">pictured: me in versailles, paris</p>
-                <p>Hello, I'm Minhee. I am a fourth year at UC Davis studying computer science and psychology.</p>
+            	<h1>A Little About Me...</h1>
+                <p><img src="images/woo.jpg" alt="photo" class="alignleft" id="pfp"></p>
+                <p id="pfp_caption">location: seoul, korea</p>
+                <p>My name is Minhee. I am a fourth year at UC Davis studying computer science and psychology.</p>
                 <p>I'm currently working at UC Davis as a ServiceNow developer and have experience in programming,
                     teaching, and research. I'm a natural problem solver and want to create products that bring humanity
                     closer together in a sleek, innovative way.
                 </p>
-                <p>I enjoy the collaborative process, minimal design, and connecting with people.</p>
-                <p>In my free time I am usually researching sneaker drops, re-watching Christopher Nolan movies, 
+                <p>I became interested in programming in my freshman year of college through an intro class in Python.
+                    I know that I've always liked games. To me, programming is something like a puzzle and a maze.
+                    I don't quite know what I'm working towards or how to get there but as I move forward, it becomes
+                    clearer and clearer.
+                </p>
+                <p>Over the years, I've come to experience the joys of programming outside of just typing away on my IDE.
+                I love the collaborative process and connecting with people through a common purpose. Though I am not
+                a designer, I am inspired by minimal, clean design. I am currently exploring design through web dev,
+                design classes, and self-practice.</p>
+                <p>In my free time, I'm researching sneaker drops, re-watching Christopher Nolan movies, 
                     or jogging outside.</p>
             </article>
             
             <article id="projects">
-            	<h2>Websites and Projects</h2>
-                <ol>
-                	<li><a href="http://des117.space/fa2019-schleiner/mhson/">Design 117: Interactive Media I</a></li>
-                    <li><a href="./des157-wi20/index.html">Design 157: Interactive Media II</a></li>
-                    <li><a href="./foodprint/index.html">HackDavis 2019: foodprint</a></li>
-                    <li><a href="https://ucdavisit.service-now.com/servicehub?id=catalog&spa=1">UC Davis Software Catalog</a></li>
+            	<h2>My Recent Work</h2>
+                <ul>
+                	<li><a href="http://des117.space/fa2019-schleiner/mhson/">DES 117: Interactive Media I</a></li>
+                    <li><a href="./des157-wi20/index.html">DES 157: Interactive Media II</a></li>
+                    <li><a href="./foodprint/index.html">HackDavis 19: Foodprint</a></li>
+                    <li><a href="https://ucdavisit.service-now.com/servicehub?id=catalog&spa=1">UCD Software Catalog</a></li>
                     <li><a href="https://github.com/mson97/connect-4-game">Connect 4: Terminal</a></li>
-                </ol>
-            
+                </ul>
+                <br>
+                <br>
             	<h2>Skills</h2>
                 <p>I have a diverse and interdisciplinary skillset including programming,
                     development, design, and more.</p>
                 <ul>
-                	<li>Programming Languages <br>
-                        <span>  + C, C++, Java, Python</span> <br>
-                        <span>  + HTML, CSS, JavaScript</span>
-                    </li>
-                    <li>Development and Testing <br>
-                        <span>  + Front-end and back-end</span> <br>
-                        <span>  + Quality assurance and tests</span> <br>
-                        <span>  + Design and UI/UX</span>
-                    </li>
-                    <li>Collaborative Work</li>
-                    <li>Interpersonal Communcation</li>
-                    <li>Barista-ing</li>
+                    <li>Programming Languages</li>
+                    <li>+ C, C++, Java, Python</li>
+                    <li>+ HTML, CSS, JavaScript</li>
+                    <li>Development and Testing</li>
+                    <li>+ Front-end and back-end</li>
+                    <li>+ Quality assurance and testing</li>
+                    <li>+ Design and UI/UX</li>
+                    <li>(also ☕Barista-ing)</li>
                 </ul>
             </article>
         
@@ -70,9 +120,9 @@
         
         <footer>
        	  <h1>Contact Me</h1>
-            <p>Phone 408.663.7686 <br>
-			   Email <a href="mailto:&#109;&#104;&#115;&#111;&#110;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">&#109;&#104;&#115;&#111;&#110;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;</a> <br>
-			   Connect <a href="https://www.linkedin.com/in/minhee-son-1a1170154/">LinkedIn</a></p>
+            <p>📱 Phone: 408.663.7686 <br>
+            📬 Email: <a href="mailto:&#109;&#104;&#115;&#111;&#110;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">&#109;&#104;&#115;&#111;&#110;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;</a> <br>
+			👥 Connect: <a href="https://www.linkedin.com/in/minhee-son-1a1170154/">LinkedIn</a></p>
       </footer>
     
     </div>
