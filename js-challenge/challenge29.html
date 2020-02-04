@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Challenges: Challenge 29</title>
+    <style>
+        body { height: 3000px; }
+        .one { background-color: beige; transition: all 3s; }
+        .two { background-color: blueviolet; transition: all 3s; }
+        .three { background-color: coral; transition: all 3s; }
+        .four { background-color: cornflowerblue; transition: all 3s; }
+        .five { background-color: darkgoldenrod; transition: all 3s; }
+    </style>
+</head>
+
+<body class="one">
+
+    <h1>JavaScript Event Challenges: Challenge 29</h1>
+
+    <p>Scroll Down!</p>
+
+    <script>
+       var bdy = document.querySelector("body");
+       var pagetop;
+       window.addEventListener("scroll", function(){
+           pagetop = window.pageYOffset || document.documentElement.scrollTop;
+           switch(true){
+               case pagetop < 500: bdy.className="one"; break;
+               case pagetop < 1000: bdy.className="two"; break;
+               case pagetop < 1500: bdy.className="three"; break;
+               case pagetop < 2000: bdy.className="four"; break;
+               case pagetop < 2500: bdy.className="five"; break;
+           }
+       });
+    </script>
+</body>
+</html>

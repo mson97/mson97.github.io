@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Challenges: Challenge 23</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Event Challenges: Challenge 23</h1>
+    <p>Here is a paragraph of text</p>
+    <p>Here is another paragraph of text</p>
+    <p> Here is a third paragraph of text</p>
+    <button>Turn Them All Green!</button>
+
+    <script>
+        var btn = document.querySelector('button');
+       
+        btn.addEventListener('click', function(){
+            var paragraphs = document.querySelectorAll('p');
+            for(var i = 0; i < paragraphs.length; ++i) {
+                paragraphs[i].style.color = "green";
+            }
+        });
+    </script>
+</body>
+</html>
