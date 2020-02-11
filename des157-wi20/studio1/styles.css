@@ -1,0 +1,95 @@
+body {
+    font-family: 'Noto Sans KR', sans-serif;   
+    font-size: 14px; 
+    font-weight: 300;
+    width: 800px;
+    padding: 5% 0% 0% 0%;
+    line-height: 1.6;
+    margin:0 auto;
+    background-color: cornsilk;
+}
+
+img {
+    width: 800px;
+    height: 200px;
+    object-fit: cover;
+    padding: 2%;
+}
+
+#start {
+    font-family: 'Montserrat', sans-serif;
+    color: darkblue;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 25px;
+    padding-top: 0%;
+    text-align: center;
+}
+
+#myform { 
+    padding: 15% 10% 15% 30%; 
+}
+
+#result {
+    font-size: 16px;
+    color: cornflowerblue;
+    font-weight: 400;
+    padding-left: 25%;
+    padding: 15%; 
+}
+
+#myform label {
+    padding-top: 5px; 
+    color: lightblue; 
+}
+
+input[type=text] {
+    padding-bottom: 2px;
+    padding-top: 2px; 
+    border: none;
+    background-color: white;
+    border-bottom: 1px solid gray;
+}
+
+input, label {display:block;}
+ 
+hr {
+    border: .5px solid white;
+}
+a { 
+    text-decoration: none; 
+    color: lightskyblue; 
+}
+
+a:hover {
+    transition: .3s ease-in-out; 
+    color: white; 
+}
+
+.container {
+    justify-content: left;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border: solid 5px cornflowerblue;
+    flex-wrap: wrap;
+    display: grid; 
+    grid-template-columns: 30ch 60ch;
+    border-radius: 15px;
+}
+
+footer {
+    padding: 5% 0% 3% 0%; 
+    text-align: left;
+    color: darkblue; 
+}
+
+input[type=button], input[type=submit] {
+    background-color: gold;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 30px; 
+    text-decoration: none;
+    cursor: pointer;
+  }
