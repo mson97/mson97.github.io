@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+  }
+
+/* body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    background: white;
+    color: #202020;
+    text-align: center;
+    background: linear-gradient(270deg, #b69dc0, #f5bf81ee);
+    background-size: 400% 400%;
+    animation: AnimationName 10s ease infinite;
+}
+
+/* background color animation */
+@keyframes AnimationName {
+    0% {
+      background-position: 0% 50%
+    }
+  
+    50% {
+      background-position: 100% 50%
+    }
+  
+    100% {
+      background-position: 0% 50%
+    }
+}
+
+/* text styling */ 
+h1 {
+    font-family: 'Heebo', sans-serif;
+    font-size: 300%;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-family: 'Heebo', sans-serif;
+    font-size: 200%;
+    font-weight: 400;
+    letter-spacing: 3px;
+    
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    transition: 0.2s ease-in;
+    color: white;
+}
+
+/* items styling */
+#items {
+    margin: 2%;
+    display: block;
+    flex-direction: none;
+    text-align: center;
+}
+
+#items img {
+    max-width: 200px;
+    max-height: 400px;
+    transition: transform 0.3s;
+}
+
+#items article {
+    margin: auto;
+    padding: 1.6%;
+}
+
+#items article img:hover {
+    transform: scale(1.2);
+}
+
+/* footer styling */
+footer {
+    font-size: 80%;
+    text-align: left;
+    padding: 2% 2% 0.3% 2%;
+    position: fixed;
+    bottom: 0;
+}
+
+
+
+
+/* overlay styling */
+.overlay section {
+    color: white;
+    background-color: #000000ee;
+    padding: 10% 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    display: none;
+    text-align: center;
+}
+
+.overlay .itemclose {
+    color: rgb(85, 85, 85);
+}
+
+.overlay .itemclose:hover {
+    color: rgb(255, 255, 255);
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+
+
+@media only screen and (min-width: 600px){
+#items {
+    flex-direction: row;
+    display: flex;
+}
+h1 {
+    padding-top: 5%;
+    font-size: 500%;
+    letter-spacing: 5px;
+}
+iframe {
+    width: 400px;
+    height: 200px;
+}
+}
