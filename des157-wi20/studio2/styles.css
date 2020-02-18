@@ -2,6 +2,10 @@
     box-sizing: border-box;
   }
 
+html, body {
+    min-height: 100%;
+}
+
 /* body styling */
 body {
     font-family: 'Roboto', sans-serif;
@@ -59,14 +63,15 @@ a:hover {
 /* items styling */
 #items {
     margin: 2%;
-    display: block;
-    flex-direction: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     text-align: center;
 }
 
 #items img {
     max-width: 200px;
-    max-height: 400px;
+    max-height: 250px;
     transition: transform 0.3s;
 }
 
@@ -88,9 +93,6 @@ footer {
     bottom: 0;
 }
 
-
-
-
 /* overlay styling */
 .overlay section {
     color: white;
@@ -100,7 +102,7 @@ footer {
     top: 0;
     left: 0;
     height: 100%;
-    width: 100vw;
+    width: 100%;
     display: none;
     text-align: center;
 }
@@ -118,11 +120,13 @@ footer {
 
 @media only screen and (min-width: 600px){
 #items {
-    flex-direction: row;
-    display: flex;
+    flex-wrap: nowrap;
+}
+#items img {
+    max-height: 400px;
+    max-width: 400px;
 }
 h1 {
-    padding-top: 5%;
     font-size: 500%;
     letter-spacing: 5px;
 }
