@@ -12,10 +12,10 @@ body {
 
 a {
     text-decoration: none;
-    color: #000000;
+    color: inherit;
 }
 
-a:hover {
+.home:hover, footer a:hover {
     transition: 0.2s ease-in;
     color: lightcoral;
 }
@@ -29,7 +29,13 @@ header h1 {
     font-weight: 300;
 }
 
-home {
+header h1 a:hover {
+    color: paleturquoise;
+    transition: 0.5s ease-in-out;
+    letter-spacing: 4px;
+}
+
+.home {
     font-size: 14px;
 }
 
