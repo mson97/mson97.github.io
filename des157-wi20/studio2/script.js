@@ -1,4 +1,3 @@
-console.log('reading js');
 'use strict';
 
 var item1 = document.querySelector('#item1');
