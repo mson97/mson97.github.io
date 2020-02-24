@@ -132,7 +132,6 @@
                 setUpTurn();
             }, 2000);
         }
-         
         // if neither die is a 1...
         else {
             if (gameData.roll1 === gameData.roll2){
