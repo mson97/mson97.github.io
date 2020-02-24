@@ -42,11 +42,10 @@
             console.log(gameData.penny[gameData.index]);
             gameControl.innerHTML += '<h2>The Starting Player Has Been Chosen</h2>'
             if (gameData.index === 0) {
-                gameControl.innerHTML += '<p>You flipped heads! Player 1 goes first.</p>';
-                mainBody.classList.add("color1");
+                gameControl.innerHTML += '<p>You flipped heads! Player 1 goes first.</p>'; 
             } else {
                 gameControl.innerHTML += '<p>You flipped tails! Player 2 goes first.</p>';
-                mainBody.classList.add("color2");
+                
             }
             gameControl.innerHTML += '<button id="setup">Begin Game</button>';
 
@@ -65,6 +64,13 @@
 
 
     function setUpTurn(){
+        if (gameData.index === 0) {
+            mainBody.classList.add("color1");
+            mainBody.classList.remove("color2");
+        } else {
+            mainBody.classList.add("color2");
+            mainBody.classList.remove("color1");
+        }
         game.innerHTML = `<h2>It is ${gameData.players[gameData.index]}'s Turn</h2>`
         game.innerHTML += `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
         actionArea.innerHTML = '<button id="roll">Roll the Dice</button>';
@@ -127,6 +133,7 @@
         else if(gameData.roll1 === 1 || gameData.roll2 === 1){
             numDoubles = 0;
             gameData.index ? gameData.index = 0 : gameData.index = 1;
+
             game.innerHTML += `<p>Sorry, one of your rolls was a one, switching to  ${gameData.players[gameData.index]}</p>`;
             setTimeout(function(){
                 setUpTurn();
