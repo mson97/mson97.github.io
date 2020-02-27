@@ -15,6 +15,15 @@ a {
     color: inherit;
 }
 
+p a {
+    font-weight: 400;
+}
+
+p a:hover {
+    transition: 0.3s ease-in;
+    color: lightcoral;
+}
+
 .home:hover, footer a:hover {
     transition: 0.2s ease-in;
     color: lightcoral;
