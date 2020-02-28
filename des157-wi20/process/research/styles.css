@@ -70,7 +70,6 @@ main {
     margin-right: auto;
     padding: 3% 0% 3% 0%;
     display: grid;
-    flex: wrap;
     background-color: whitesmoke;
 }
 
