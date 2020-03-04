@@ -22,8 +22,6 @@ body {
 	padding: 30px 0;
 }
 
-
-
 #page {
 	width: 800px;
 	margin-left: auto;
@@ -31,7 +29,7 @@ body {
 }
 
 header {
-	margin: 2% 2% 0% 2%;
+	margin: 0.6em;
 }
 
 header, footer {
@@ -40,7 +38,7 @@ header, footer {
 }
 
 section {
-	padding: 20px 0;
+	padding: 20px 1em;
 	overflow:hidden;
 }
 
@@ -51,16 +49,13 @@ footer {
 }
 
 #about {
-	width: 70%;
-	padding: 1em;
+	width: 65%;
 	float: left;
 }
 
-#projects {
+#projects, #skills {
 	width: 30%;
-	float:left;
-	margin-top: 15%;
-	padding: 1em;
+	float:right;
 }
 
 .alignleft {
@@ -74,10 +69,11 @@ h1, h2, h3 {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	margin-bottom:.5em;
+	letter-spacing: .1em;
 }
 
 h1 {
-	font-size: 180%;
+	font-size: 200%;
 }
 
 h2 {
@@ -91,7 +87,7 @@ header h1 {
 	margin-bottom:.1em;
 }
 
-header h2 {
+header h2, #pfp_caption {
 	color: #999999;
 }
 
@@ -137,7 +133,7 @@ a:hover {
 
 @media only screen and (max-width: 550px) {
 	
-	#about, #projects {
+	#about, #projects, #skills {
 		float:none;
 		width:100%;
 	}
@@ -145,14 +141,9 @@ a:hover {
 }
 	
 #pfp {
+	box-sizing: border-box;
 	padding: 4% 4% 12% 4%;
 	border: 2px solid whitesmoke;
-}
-
-#pfp_caption {
-	margin-top: 0;
-	font-size: 85;
-	color: #999999;
 }
 
 /* Source: https://christopheraue.net/design/fading-pages-on-load-and-unload */
