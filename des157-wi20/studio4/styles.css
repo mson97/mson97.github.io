@@ -1,0 +1,128 @@
+/* POSITIONING, SPACING, AND SIZE STYLING FOR MAIN ELEMENTS*/
+
+body {
+    background-color: #FFFAF1;
+    color: #333333;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 400;
+    line-height: 0.8;
+    padding: 3% 5%;
+    font-size: 14px;
+    height: 1500px;
+}
+
+.page {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    width: 100%;
+    height: 10vh;
+    text-align: right;
+}
+
+/* TEXT AND IMAGE STYLING */
+
+h1, h2{ font-weight: 700; }
+
+h3 { font-weight: 400; }
+
+a {
+    color: #888888;
+    font-size: 80%;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #333333;
+    transition: 0.3s ease-in-out;
+}
+
+img {
+    max-width: 400px;
+    max-height: 400px;
+}
+
+/* SIZING, CURSOR, AND POSITION STYLING FOR DRAGGABLE ELEMENTS */
+
+.container1 {
+    z-index: 0;
+    max-width: 450px;
+    max-height: 500px;
+}
+
+
+.drag-cont {
+    position: absolute;
+    cursor: grab;
+}
+
+.drag-cont:active {
+    cursor: grabbing;
+}
+
+/* OFFSET IMAGES FROM EACH OTHER */
+
+#item2 { margin-left: 20%; }
+#item3 { margin-left: 40%; }
+#item4 { margin-left: 60%; }
+
+.tag {
+    cursor: default;
+    top: 300px;
+    position: relative;
+    font-size: 450%;
+    line-height: 0;
+    z-index: 3;
+    text-align: right;
+} 
+
+/* TAG COLORS */
+
+.color1 { color:rgb(97, 116, 85); }
+.color2 { color: rgb(143, 130, 163); }
+.color3 { color: rgb(255, 235, 176); }
+.color4 { color: rgb(224, 175, 115); }
+
+
+/* FOOTER STYLING */
+
+footer {
+    padding: 0 5%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: left;
+    width: 100%;
+    opacity: 0.8;
+}
+
+footer h1 {
+    font-size: 130%;
+}
+
+/* MEDIA QUERY FOR SMALLER SCREEN STYLING */
+
+@media only screen and (max-width: 1080px){
+    #item2 { margin-left: 15%; }
+    #item3 { margin-left: 30%; }
+    #item4 { margin-left: 45%; }
+    .tag {
+        top: 200px;
+        font-size: 300%;
+        text-align: center;
+    }
+    .container1 {
+        max-height: 350px;
+        max-width: 300px;
+    }
+    img {
+        max-height: 250px;
+        max-width: 250px;
+    }
+    footer h1 {
+        font-size: 80%;
+    }
+}
