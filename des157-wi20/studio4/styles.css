@@ -40,6 +40,10 @@ a:hover {
     transition: 0.3s ease-in-out;
 }
 
+p {
+    color: #8f8f8f;
+}
+
 img {
     max-width: 400px;
     max-height: 400px;
