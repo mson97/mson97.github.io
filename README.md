@@ -1,2 +1,3 @@
-# githubprofile
-A template for a github profile site
+# Minhee Son
+Welcome to my page
+minhee.me
