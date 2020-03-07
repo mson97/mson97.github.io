@@ -1,28 +1,52 @@
+var x = new Array(20);
+var y = new Array(20);
+var segLength = 25;
+
+console.log("logging");
+
 function setup() {
-    var myCanvas = createCanvas(800, 250);
-    myCanvas.parent('mySketch');
-    frameRate(15);
-    background('#ffffff');
+  var myCanvas = createCanvas(800, 250);
+  myCanvas.parent('mySketch');
+  strokeWeight(20);
+  stroke('#fbd1b7');
+  for (var i=0; i<x.length; i++) {         // initialize the array
+    x[i]=0;
+    y[i]=0;
+  }
+  background('#ffffff');
 }
-
-/*
-var colors = ['#FE938C', '#E6B89C', '#EAD2AC', '#EAD2AC', '#9CAFB7', '#4281A4']
-
-function randomInt(min, max){
-    return (Math.random() * (max - min + 1) + min);
-} */
   
 function draw() {
-    if(mouseIsPressed && (mouseButton == LEFT)) {
-      noStroke();
-      fill(random(255), random(255), random(255), random(255));
-    } else {
-      fill('#ffffff');
-      stroke(random(255), random(255), random(255), random(255));
-    }
-    var triangleSize = random(50);
-    var x2 = mouseX + triangleSize/2;
-    var y2 = mouseY - triangleSize;
-    var x3 = mouseX + triangleSize;
-    triangle(mouseX, mouseY, x2, y2, x3, mouseY);
+  background('#ffffff');
+  dragSegment(0, mouseX, mouseY);
+  for (var i=0; i<x.length-1; i++) {
+    dragSegment(i+1, x[i], y[i]);
   }
+}
+
+function dragSegment(i, xin, yin) {
+  var dx = xin - x[i];
+  var dy = yin - y[i];
+  var angle = atan2(dy, dx);
+  x[i] = xin - cos(angle) * segLength;
+  y[i] = yin - sin(angle) * segLength;
+  segment(x[i], y[i], angle);
+}
+
+function segment(x, y, a) {
+  push();
+  translate(x, y);
+  rotate(a);
+  line(0, 0, segLength, 0);
+  pop();
+}
+
+var canvas = document.getElementById('mySketch');
+
+canvas.addEventListener('mousedown', e => {
+  stroke('#fee9b2b0');
+})
+
+canvas.addEventListener('mouseup', e => {
+  stroke('#fbd1b7');
+})
