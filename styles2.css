@@ -144,10 +144,12 @@ header {
 .container-left { grid-column-start: 1; }
 .container-right { grid-column-start: 2; }
 
-#projects, #skills {
-    padding: 1em;
-	width: 40%;
-	float:right;
+
+/************* WORKS PAGE STYLING **************/
+
+#works-skills {
+    display: block;
+    max-width: 50ch;
 }
 
 /************ TYPOGRAPHY STYLING *************/
@@ -162,7 +164,7 @@ h1 {
 }
 
 h2 {
-	font-size: 120%;
+    font-size: 120%;
 }
 
 p {
@@ -177,6 +179,7 @@ ul {
 
 ul li {
 	margin-bottom:.5em;
+	margin-left: 5ch;
 }
 
 a {
