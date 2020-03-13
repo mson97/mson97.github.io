@@ -10,7 +10,7 @@ div nav {
 	position: fixed;
 	margin: 1em;
 	right: 0;
-	bottom: 0;
+	height: 100vh;
 }
 
 header h1 {
@@ -29,9 +29,14 @@ p.parag {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	text-align: left;
 	padding: 1.6em;
 	line-height: 1.6em;
 	letter-spacing: 0.03em;
+}
+
+p.parag a {
+	text-decoration: underline;
 }
 
 article {
@@ -47,7 +52,7 @@ section {
 }
 
 a {
-    text-decoration: underline;
+    text-decoration: none;
     color: #333;
 }
 
@@ -56,42 +61,41 @@ a:hover {
 	transition: all 0.3s ease-in;
 }
 
-/*************** Navigation Styles ***************/
-
-nav {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+.cursor-ptr {
+	cursor: pointer;
 }
 
+/*************** Navigation Styles ***************/
+
 nav ul {
-	height: 60ch;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	list-style-type: none;
-	justify-content: space-between;
+	justify-content: center;
+	align-items: center;
 	padding: 0;
+	margin:0;
 }
 
 nav ul li a {
 	font-family: 'Suranna', serif;
 	font-size: 1.5em;
 	text-align: center;
-	text-decoration: none;
 	color: #888;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 0.3em;
+	padding: 0.3em 0.5em;
 }
 
 .selected {
 	background: rgb(187, 229, 235);
 	border-radius: 25px;
+	font-size: 1.8em;
 	color: black;
-	transition: all 1s;
+	transition: all 0.5s ease-in-out;
 }
-
 
 /*************** First Section Styles ***************/
 #first article{
@@ -109,11 +113,6 @@ nav ul li a {
 	font-size: 600%;
 	text-align: center;
 	letter-spacing: 0.1em;
-}
-
-#first article .subtext {
-	color: rgb(247, 201, 76);
-	text-decoration: underline;
 }
 
 /*************** Second Section Styles ***************/
@@ -177,7 +176,6 @@ nav ul li a {
 }
 
 #seventh .cloud img, #eighth .cloud img {
-	margin: 5% 0%;
 	width: 500px;
 }
 
@@ -200,6 +198,7 @@ nav ul li a {
 /*************** Button Styles ***************/
 div.rect-btn {
 	display: flex;
+	
 }
 
 .rect-btn a {
@@ -209,11 +208,13 @@ div.rect-btn {
     border: 1px solid #333;
 	padding: 1ch 8ch;
 	text-decoration: none;
+	letter-spacing: 0.1em;
+	color: black;
 }
 
-.btn a:hover {
-    transition: all 0.3s ease-in;
-    color: #888; 
+.rect-btn a:hover {
+	transition: all 0.3s ease-in;
+	background-color: #FEE0E0;
 }
 
 .icon-btn img {
@@ -227,7 +228,7 @@ div.rect-btn {
 /*************** Quote Styles ***************/
 
 .quote {
-    margin: 8vh;
+    margin: 6vh;
 	max-width: 600px;
 	display: block;
 	margin-left: auto;
@@ -235,7 +236,7 @@ div.rect-btn {
 }
 
 .quote p {
-    font-size: 150%;
+    font-size: 160%;
 	padding: 2ch 0ch;
 	letter-spacing: 0.05em;
 	line-height: 2em;
@@ -245,7 +246,7 @@ div.rect-btn {
 
 .impact {
 	margin: 10vh;
-	max-width: 500px;
+	max-width: 800px;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -253,13 +254,20 @@ div.rect-btn {
 
 .impact p {
 	font-size: 200%;
-	letter-spacing: 0.05em;
-	line-height: 1.8em;
+	letter-spacing: 0.03em;
+	line-height: 1.4em;
 }
 
-strong {
-	background-color: rgb(253, 237, 170);
+mark {
+	border-radius: 20px;
+	padding: 0 0.8ch;
+	background-color: #E7F9FA;
+	
 	font-weight: 400;
+}
+
+.pink {
+	background-color: #F8DEDE;
 }
 
 .left-border { border: 0.5px solid #000; width: 40%; margin-right: 60%; margin-left: 0px; }
@@ -323,4 +331,109 @@ ul.shapes li  {
     font-style: italic;
     font-size: 14px;
 	color: #333;
+}
+
+/*************** Animations ***************/
+.zoom {
+	transition: transform .5s;
+}
+.zoom:hover {
+	transform: scale(1.1);
+}
+
+.oscillate {
+	-webkit-animation: oscillate 2s linear forwards infinite alternate;
+	animation: fadein 2s linear forwards infinite alternate;
+}
+
+@-webkit-keyframes oscillate {
+	0%, 100% { opacity: 50%; }
+	50% { opacity: 100; }
+}
+
+@keyframes oscillate {
+	0%, 100% { opacity: 50%; }
+	50% { opacity: 100; }
+}
+
+.fadeIn {
+    -webkit-animation: fadein 2s linear forwards;
+    animation: fadein 2s linear forwards;
+}
+
+@-webkit-keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.fadeOut {
+	-webkit-animation: fadeout 1s linear forwards;
+    animation: fadeout 1s linear forwards;
+}
+
+@-webkit-keyframes fadeout {
+	0% { opacity: 1; }
+	100% { opacity: 0; }
+  }
+  
+@keyframes fadeout {
+	0% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+/*************** Mobile/XS Screen Styles ***************/
+@media only screen and (max-width: 600px) {
+
+	nav {
+		display: none;
+	}
+
+	.quote p {
+		font-size: 130%;
+		padding: 2ch 0ch;
+		letter-spacing: 0.05em;
+		line-height: 2em;
+	} 
+
+	#first article h1, #third article h1 {
+		font-size: 400%;
+		text-align: center;
+		letter-spacing: 0.1em;
+	}
+	
+	.shapes img {
+		width: 80px;
+	}
+	ul.shapes li {
+		width: 80px;
+	}
+
+	#fifth #timeline img {
+		margin: 1em;
+		width: 350px;
+	}
+
+	.timeline1 { max-height: 70px; }
+
+	.timeline2 { max-height: 130px; }
+
+	.timeline3 { max-height: 210px; }	
+
+	.metrics {
+		position: relative;
+		padding: 0px;
+		margin: 0px;
+		top: -100px;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	
+	#seventh .cloud img, #eighth .cloud img {
+		width: 300px;
+	}
 }
