@@ -1,6 +1,5 @@
-'use strict';
-
 (function(){
+    "use strict";
     const nextBtnImg = '<img src="images/next.png" alt="next" class="next oscillate zoom">';
 
     /* All buttons/links that need smooth scroll when clicked */
@@ -35,7 +34,7 @@
         let targetID = event.target.getAttribute('href');
 
         // the ID of the link lies in the outer element
-        if (targetID == null) {
+        if (targetID === null) {
             targetID = event.target.parentElement.getAttribute('href');
         }
 
@@ -107,7 +106,7 @@
     /* Reveal portions of the timeline image in the fifth section */
     /* Sections will be shown sequentially after mouse is hovered over image */
     /* Display final text and next button once timeline image is all shown */
-    document.querySelector('#fifth #timeline img').addEventListener("mouseover", function(event) {
+    document.querySelector('#fifth #timeline img').addEventListener("mouseover", function() {
         const timeline = document.querySelector('#timeline');
         setTimeout(function() {
             if (timeline.classList.contains('timeline1')) {
@@ -148,16 +147,16 @@
             if (hidden.length === 0) {
                 const sixthText = document.querySelector('#sixth .subtext');
                 sixthText.classList.remove('subtext');
-                sixthText.classList.add('fadeIn')
+                sixthText.classList.add('fadeIn');
                 sixthText.innerHTML = 'In the last decade, we have experienced constant hours of sleep, work, and survival activities.';
                 const sixthNext = document.querySelector('#sixth .icon-btn a');
                 sixthNext.parentElement.classList.add('fadeIn');
                 sixthNext.innerHTML = nextBtnImg;
             }
-    };
+    }
 
     /* Add onClick event handlers for the cloud images in seventh section */
-    document.getElementById('cloud1').addEventListener("click", function(event) {
+    document.getElementById('cloud1').addEventListener("click", function() {
         const seventhHeader = document.querySelector('#seventh h1');
         // hide header
         seventhHeader.classList.add('fadeOut');
@@ -196,7 +195,7 @@
                 event.target.parentNode.setAttribute('id', 'cloud5');
                 eighthText = document.getElementById('eighth-text');
                 eighthSubText.style.display = "none";
-                eighthText.classList.add('fadeIn')
+                eighthText.classList.add('fadeIn');
 
                 eighthText.innerHTML = "Unlike the other areas of life, personal time has experienced drastic change.<br>It's no question that screen time is responsible for this decrease.";
                 const eighthNext = document.querySelector('#eighth .icon-btn a');
