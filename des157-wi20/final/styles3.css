@@ -1,0 +1,326 @@
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 200;
+	color: #333;
+	font-size: 15px;
+	background-color: white;
+}
+
+div nav {
+	position: fixed;
+	margin: 1em;
+	right: 0;
+	bottom: 0;
+}
+
+header h1 {
+	text-align: center;
+}
+
+h1, h2, h3 {
+    font-family: 'Suranna', serif;
+	font-weight: 400;
+	margin: 0 auto;
+	letter-spacing: 0.05em;
+}
+
+p.parag {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 1.6em;
+	line-height: 1.6em;
+	letter-spacing: 0.03em;
+}
+
+article {
+	max-width: 100%;
+}
+
+section {
+	width: 75vw;
+	height: 100vh;
+	margin: 0 auto 100vh auto;
+	padding: 25px;
+	/*box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.75);*/
+}
+
+a {
+    text-decoration: underline;
+    color: #333;
+}
+
+a:hover {
+	background-color: cornsilk;
+	transition: all 0.3s ease-in;
+}
+
+/*************** Navigation Styles ***************/
+
+nav {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+nav ul {
+	height: 60ch;
+	display: flex;
+	flex-direction: column;
+	list-style-type: none;
+	justify-content: space-between;
+	padding: 0;
+}
+
+nav ul li a {
+	font-family: 'Suranna', serif;
+	font-size: 1.5em;
+	text-align: center;
+	text-decoration: none;
+	color: #888;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0.3em;
+}
+
+.selected {
+	background: rgb(187, 229, 235);
+	border-radius: 25px;
+	color: black;
+	transition: all 1s;
+}
+
+
+/*************** First Section Styles ***************/
+#first article{
+	display: block;
+	margin: 15% auto;
+}
+
+#first article .title {
+	display: block;
+	margin: 0 auto;
+	width: 255px; height: 150px;
+}
+
+#first article h1, #third article h1 {
+	font-size: 600%;
+	text-align: center;
+	letter-spacing: 0.1em;
+}
+
+#first article .subtext {
+	color: rgb(247, 201, 76);
+	text-decoration: underline;
+}
+
+/*************** Second Section Styles ***************/
+#second div,  #seventh article, #ninth article{
+	display: block;
+}
+
+#second h1, #fifth h1, #sixth h1, #seventh h1, #ninth h1 {
+	font-size: 350%;
+	text-align: left;
+	margin-bottom: 5%;
+}
+
+#second .btn, #ninth .btn{
+	padding-top: 3%;
+}
+
+/*************** Third Section Styles ***************/
+#third article {
+	display: block;
+	padding-top: 12%;
+}
+
+#third article h1 {
+	padding: 10% 0% 5% 0%;
+}
+
+/*************** Fourth Section Styles ***************/
+
+#fourth article p {
+	margin: 0%;
+}
+
+/*************** Fifth Section Styles ***************/
+
+#fifth #timeline img {
+	margin: 1em;
+	width: 800px;
+}
+
+/*************** Sixth Section Styles ***************/
+
+#sixth article h1 {
+	padding: 5% 0;
+}
+
+#sixth article .parag, #sixth article .btn {
+	position: relative;
+	top: -100px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/*************** Seventh Section Styles ***************/
+
+#seventh div, #eighth div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#seventh .cloud img, #eighth .cloud img {
+	margin: 5% 0%;
+	width: 500px;
+}
+
+/*************** Eighth-Ninth Section Styles ***************/
+
+#eighth article {
+	margin-top: 100px;
+}
+
+#ninth article {
+	margin: 5% 0%;
+}
+
+/*************** Tenth Section Styles ***************/
+#tenth article, #eleventh article, #twelfth article {
+	display: block;
+	margin: 15% auto 0 auto;
+}
+
+/*************** Button Styles ***************/
+div.rect-btn {
+	display: flex;
+}
+
+.rect-btn a {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+    border: 1px solid #333;
+	padding: 1ch 8ch;
+	text-decoration: none;
+}
+
+.btn a:hover {
+    transition: all 0.3s ease-in;
+    color: #888; 
+}
+
+.icon-btn img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 30px;
+    max-width: 50px;
+}
+
+/*************** Quote Styles ***************/
+
+.quote {
+    margin: 8vh;
+	max-width: 600px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.quote p {
+    font-size: 150%;
+	padding: 2ch 0ch;
+	letter-spacing: 0.05em;
+	line-height: 2em;
+} 
+
+/*************** Impact Styles ***************/
+
+.impact {
+	margin: 10vh;
+	max-width: 500px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.impact p {
+	font-size: 200%;
+	letter-spacing: 0.05em;
+	line-height: 1.8em;
+}
+
+hi {
+	background-color: rgb(253, 237, 170);
+	font-weight: 400;
+}
+
+.left-border { border: 0.5px solid #000; width: 40%; margin-right: 60%; margin-left: 0px; }
+
+.right-border { border: 0.5px solid #000; width: 40%; margin-right: 0px; margin-left: 60%; }
+
+/*************** Shapes Styles ***************/
+
+.shapes img {
+	width: 150px;
+}
+
+ul.shapes {
+	list-style-type: none;
+	padding: 2% 0%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+ul.shapes li  {
+	display: block;
+	width: 150px;
+	text-align: center;
+}
+
+/*************** Timeline Styles ***************/
+
+#timeline {
+    overflow:hidden;
+}
+
+.timeline1 { max-height: 147px; }
+
+.timeline2 { max-height: 279px; }
+
+.timeline3 { max-height: 500px; }
+
+/*************** Metrics Styles ***************/
+
+.metrics {
+	position: relative;
+	padding: 0px;
+	margin: 0px;
+    top: -130px;
+    left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.hidden {
+	opacity: 0;
+}
+
+/*************** Cloud Styles ***************/
+
+.cloud img {
+	width: 500px;
+}
+
+.subtext {
+    font-style: italic;
+    font-size: 14px;
+	color: #333;
+}
