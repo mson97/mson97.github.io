@@ -206,15 +206,10 @@ div.rect-btn {
 	margin-right: auto;
 	text-align: center;
     border: 1px solid #333;
-	padding: 1ch 8ch;
+	padding: 1ch 3ch;
 	text-decoration: none;
 	letter-spacing: 0.1em;
 	color: black;
-}
-
-.rect-btn a:hover {
-	transition: all 0.3s ease-in;
-	background-color: #FEE0E0;
 }
 
 .icon-btn img {
@@ -333,15 +328,32 @@ ul.shapes li  {
 	color: #333;
 }
 
+/*************** Bottom Links Styles ***************/
+#links {
+	margin-top: 10%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+#links a {
+	margin-right: 1em;
+	margin-left: 1em;
+}
+
+#links a:hover {
+	text-decoration:line-through;
+}
+
 /*************** Animations ***************/
 .zoom {
-	transition: transform .5s;
+	transition: transform .3s;
 }
 .zoom:hover {
 	transform: scale(1.1);
 }
 
-.oscillate {
+/*.oscillate {
 	-webkit-animation: oscillate 2s linear forwards infinite alternate;
 	animation: fadein 2s linear forwards infinite alternate;
 }
@@ -354,7 +366,7 @@ ul.shapes li  {
 @keyframes oscillate {
 	0%, 100% { opacity: 50%; }
 	50% { opacity: 100; }
-}
+}*/
 
 .fadeIn {
     -webkit-animation: fadein 2s linear forwards;
