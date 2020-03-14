@@ -1,0 +1,182 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+* {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+img {
+	max-width:100%;
+}
+
+/************* End CSS RESET **************/
+
+body {
+	background: #ffffff;;
+	color:#3d3d3d;
+	font-family: 'Didact Gothic', sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	padding: 30px 0;
+}
+
+#page {
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+header {
+	margin: 0.6em;
+}
+
+header, footer {
+	
+	overflow:hidden;
+}
+
+section {
+	padding: 20px 1em;
+	overflow:hidden;
+}
+
+footer {
+	margin: 0% 2%;
+	border-top: 0.6px solid #999999;
+	padding-top: 3%;
+}
+
+#about {
+	width: 65%;
+	float: left;
+}
+
+#projects, #skills {
+	width: 30%;
+	float:right;
+}
+
+.alignleft {
+	float:left;
+	margin: 0 10px 5px 0;
+}
+
+/************ typography *************/
+
+h1, h2, h3 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	margin-bottom:.5em;
+	letter-spacing: .1em;
+}
+
+h1 {
+	font-size: 200%;
+}
+
+h2 {
+	font-size: 120%;
+	padding-bottom: 2%;
+	border-bottom: 0.5px solid #999999;
+}
+
+header h1 {
+	font-size: 400%;
+	margin-bottom:.1em;
+}
+
+header h2, #pfp_caption {
+	color: #999999;
+}
+
+header h2:hover {
+	transition: 0.3s ease-in-out;
+	color: #000000;
+}
+
+p {
+	line-height:1.4em;
+	margin-bottom:1em;
+}
+
+ul {
+	margin-bottom:1em;
+	list-style-type: none;
+}
+
+ul li {
+	margin-bottom:.5em;
+}
+
+strong {
+	font-weight:400;
+}
+
+a {
+	text-decoration:none;
+	color:#666666;
+}
+
+a:hover {
+	transition: 0.3s ease-in;
+	color: #ffffff;
+	background-color: rgb(255, 218, 132);
+}
+
+@media only screen and (max-width: 980px) {
+	
+	#page { width: 100%; }
+	
+}
+
+@media only screen and (max-width: 550px) {
+	
+	#about, #projects, #skills {
+		float:none;
+		width:100%;
+	}
+	
+}
+	
+#pfp {
+	box-sizing: border-box;
+	padding: 4% 4% 12% 4%;
+	border: 2px solid whitesmoke;
+}
+
+/* Source: https://christopheraue.net/design/fading-pages-on-load-and-unload */
+
+#fader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	z-index: 999999;
+	pointer-events: none;
+	background: white;
+	animation-duration: 1.6s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fade-out {
+    from { opacity: 1 }
+      to { opacity: 0 }
+}
+
+@keyframes fade-in {
+    from { opacity: 0 }
+      to { opacity: 1 }
+}
+
+#fader.fade-out {
+    opacity: 0;
+    animation-name: fade-out;
+}
+
+#fader.fade-in {
+    opacity: 1;
+    animation-name: fade-in;
+}

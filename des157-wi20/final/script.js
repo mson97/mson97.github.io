@@ -1,6 +1,6 @@
 (function(){
-    "use strict";
-    const nextBtnImg = '<img src="images/next.png" alt="next" class="next oscillate zoom">';
+    'use strict';
+    const nextBtnImg = '<img src="images/next.png" alt="next" class="next zoom">';
 
     /* All buttons/links that need smooth scroll when clicked */
     const navLinks = document.querySelectorAll('nav ul li a');

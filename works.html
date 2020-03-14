@@ -17,10 +17,10 @@
     <title>Minhee Son</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <link rel="icon" type="image/ico" href="./favicon.ico">
-    <link href="styles2.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
 </head>
 
-<body class="offblue">
+<body class="offcream">
     <!-- Source: https://christopheraue.net/design/fading-pages-on-load-and-unload -->
     <svg id="fader"></svg>
     <script src="./script.js"></script>
@@ -31,10 +31,10 @@
             <nav>
                 <div id="navbar">
                     <div id="home">
-                        <a id="a-home" href="index2.html">Minhee Son</a>
+                        <a id="a-home" href="index.html">Minhee Son</a>
                     </div>
                     <div id="menu">
-                        <a id="a-work" href="works.html">Works</a>
+                        <a id="a-work" href="#" class="active">Works</a>
                         <a id="a-about" href="about.html">About</a>
                         <a id="a-resume" href="https://drive.google.com/file/d/1wAaKStsHxF3xoyDqRL0LY-PDNv9oln_t/view?usp=sharing">Resume</a>
                     </div>
@@ -43,17 +43,72 @@
         </header>
 
         <div class="row2">
-            
         	<div id="works-skills">
+  
                 <div id="works" class="container-left">
-                    <h1>My Work</h1>
-		    <ul>
-                      <li><a href="./des157-wi20/index.html">DES 157: Interactive Media II</a></li>
-		      <li><a href="http://des117.space/fa2019-schleiner/mhson/">DES 117: Interactive Media I</a></li>
-                      <li><a href="/foodprint/index.html">HackDavis 2019: Foodprint (iOS)</a></li>
-                      <li><a href="https://ucdavisit.service-now.com/servicehub?id=catalog&spa=1">UCD Software Catalog</a></li>
-                      <li><a href="https://github.com/mson97/connect-4-game">Connect 4: Terminal</a></li>
-                   </ul>
+                 
+                    <div id="iet" class="work-item">
+                        <div class="left">
+                            <a href="https://iet.ucdavis.edu/"><img src="images/iet.png" alt="ucdavis iet" class="shrink"></a>
+                        </div>
+                        <div class="right">
+                            <a href="https://iet.ucdavis.edu/"><h2 class="shrink">UC Davis IET</h2></a>
+                            <p class="subtext">JUNE 2019 - PRESENT : DEVELOPER</p>
+                            <p>Desigining custom web applications using HTML, CSS, AngularJS, and JavaScript. Developing & maintaining UC Davis ServiceNow platform through agile scrum process.</p>
+                        </div>
+                    </div>
+                    <div id="mind" class="work-item">
+                        <div class="left">
+                            <a href="https://health.ucdavis.edu/mindinstitute/"><img src="images/ucdmind.png" alt="ucdavis mind" class="shrink"></a>
+                        </div>
+                        <div class="right">
+                            <a href="https://health.ucdavis.edu/mindinstitute/"><h2 class="shrink">UC Davis MIND Institute</h2></a>
+                            <p class="subtext">OCTOBER 2018 - SEPTEMBER 2019 : RESEARCH ASST</p>
+                            <p>Computational psychology research for Attention, Impulsivility, and Regulation (AIR) Lab under Julie Schweitzer. fMRI processing to normalize and evaluate brain scans.</p>
+                        </div>
+                    </div>
+                    <div id="dose" class="work-item">
+                        <div class="left">
+                            <a href="des157-wi20/final/index.html"><img src="images/dose.png" alt="dose" class="shrink"></a>
+                        </div>
+                        <div class="right">
+                            <a href="des157-wi20/final/index.html"><h2 class="shrink">DOSE</h2></a>
+                            <p class="subtext">JANUARY - MARCH 2020 : COURSE FINAL </p>
+                            <p>Browser-based interactive exploration of issues related to technology and humanity. Provide insight into technology overuse and emphasize significance of personal time through engaging storytelling.</p>
+                        </div>
+                    </div>
+                    <div id="foodprint" class="work-item">
+                        <div class="left">
+                            <a href="foodprint/index.html"><img src="images/foodprint2.jpg" alt="foodprint" class="shrink"></a>
+                        </div>
+                        <div class="right">
+                            <a href=""><h2 class="shrink">Foodprint (iOS)</h2></a>
+                            <p class="subtext">MARCH 2019 : HACKATHON PROJECT</p>
+                            <p>App to address water scarcity by providing consumers with water usage of products. Winner of HackDavis 2019: Best Beginner Hack.</p>
+                        </div>
+                    </div>
+
+                    <div id="foodprint" class="work-item">
+                        <div class="left">
+                            <a href="#"><img src="images/portfolio.gif" alt="portfolio"></a>
+                        </div>
+                        <div class="right">
+                            <a href=""><h2 class="shrink">Personal Website</h2></a>
+                            <p class="subtext">JANUARY 2019 - PRESENT : PERSONAL PROJECT</p>
+                            <p>Personal portfolio webpage. Created from scratch-no Squarespace, Wix, or Website builder. Using HTML, CSS, and JS. Tools and inspiration include Figma, Codepen, and <a href="https://www.awwwards.com/">awwards</a>.</p>
+                        </div>
+                    </div>
+
+
+                    <!---
+		            <ul>
+                        <li></li>
+                        <li><a href="./des157-wi20/index.html">DES 157: Interactive Media II</a></li>
+		                <li><a href="http://des117.space/fa2019-schleiner/mhson/">DES 117: Interactive Media I</a></li>
+                        <li><a href="/foodprint/index.html">HackDavis 2019: Foodprint (iOS)</a></li>
+                        <li><a href="https://ucdavisit.service-now.com/servicehub?id=catalog&spa=1">UCD Software Catalog</a></li>
+                        <li><a href="https://github.com/mson97/connect-4-game">Connect 4: Terminal</a></li>
+                    </ul>
                 </div>
                 <div class="container-right">
                     <h1>My Skills</h1>
@@ -70,7 +125,7 @@
                 </div>
             </div>
 
-        </div>
+        </div>-->
 
         <div class="align-right">
             <div id="scroller">
@@ -83,11 +138,20 @@
  <!-- End of page -->
         
     <footer>
-        <h2>Contact Me</h2>
-        <p>📱 Phone: 408.663.7686 <br>
-        📬 Email: <a href="mailto:&#109;&#104;&#115;&#111;&#110;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">&#109;&#104;&#115;&#111;&#110;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;</a> <br>
-        👥 Connect: <a href="https://www.linkedin.com/in/minhee-son-1a1170154/">LinkedIn</a></p>
-        <p>Coded with HTML, CSS, JS + sleepless nights + yerba</p>
+        <section id="social-links">
+            <a href="mailto:&#109;&#104;&#115;&#111;&#110;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">
+                <img src="images/gmail.svg" class="svg zoom"></a>
+            <a href="https://www.linkedin.com/in/minhee-son-1a1170154/">
+                <img src="images/linkedin.svg" class="svg zoom"></a>
+            <a href="https://github.com/mson97">
+                <img src="images/github.svg" class="svg zoom"></a>
+            <a href="https://medium.com/@minhee.">
+                <img src="images/medium.svg" class="svg zoom"></a>
+        </section>
+        <section id="copyright">
+            <p>© 2020 MINHEESON : designed and coded by minhee </p>
+            <p class="subtext">built from scratch with html + css + js + late nights + yerba mates</p>
+        </section>
     </footer>
 
     <script src="js/scroller.js"></script>

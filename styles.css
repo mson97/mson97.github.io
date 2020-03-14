@@ -7,34 +7,59 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 	box-sizing:border-box;
 }
 
-img {
-	max-width:100%;
-}
-
 /************* End CSS RESET **************/
 
-body {
-	background: #ffffff;;
-	color:#3d3d3d;
-	font-family: 'Didact Gothic', sans-serif;
-	font-weight: 300;
-	font-size: 14px;
-	padding: 30px 0;
+/************* FONT STYLING **************/
+@font-face {
+    font-family: 'Avenir Book';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Avenir'), url("font/Avenir-Book.otf") format("opentype");
 }
 
-#page {
-	width: 800px;
+/************* OVERALL DISPLAY **************/
+
+.offblue { background: #EBF0F3; }
+.offmint { background: #F1F3EB; }
+.offcream { background: #F9F5EE; }
+
+body {
+    display: block;
+	background: #FFFFFF;
+	color:#3d3d3d;
+    font-family: 'Avenir', sans-serif;
+    line-height: 1.6;
+	font-weight: 200;
+	font-size: 16px;
+	padding: 0 5%;
+}
+
+#page1 {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 100px auto;
+    max-width: 980px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-header {
-	margin: 0.6em;
+.page {
+    display: grid;
+    row-gap: 1%;
+    min-height: 100vh;
+    grid-template-rows: 10% 90%;
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
 }
 
+.row1 { grid-row-start: 1; }
+.row2 { grid-row-start: 2; }
+
+
 header, footer {
-	
-	overflow:hidden;
+	overflow: hidden;
 }
 
 section {
@@ -43,57 +68,133 @@ section {
 }
 
 footer {
-	margin: 0% 2%;
-	border-top: 0.6px solid #999999;
-	padding-top: 3%;
+    margin-top: 20px;
 }
+
+/************* NAVIGATION BAR DISPLAY **************/
+
+header {
+    margin: auto 0;
+    max-width: 980px;
+}
+
+#navbar {
+    font-weight: 500;
+    font-family: 'Avenir', sans-serif;
+    display: grid;
+    align-content: center;
+    grid-auto-flow: column;
+}
+
+#navbar a {
+    color: rgba(0, 0, 0, 0.5)
+}
+
+#home {
+    display: grid;
+    justify-content: start;
+    align-content: center;
+    grid-auto-flow: column;
+}
+
+#menu {
+    display: grid;
+    gap: 5%;
+    justify-content: right;
+    grid-auto-flow: column;
+}
+
+#menu a {
+    padding: 1%;
+    text-align: center;
+    vertical-align: center;
+}
+
+#navbar a:hover {
+    transition: all 0.5 ease-in;
+    color: #000000;
+}
+
+/************* ABOUT PAGE STYLING **************/
 
 #about {
-	width: 65%;
-	float: left;
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: 50% 45%;
+    column-gap: 5%;
+    text-align: left;
 }
 
-#projects, #skills {
-	width: 30%;
-	float:right;
+#img-about {
+    margin: auto;
+    display: block;
+    
+}
+ 
+#img-about img {
+    display: block;
+    margin: auto;
+    max-height: 75vh;
+    max-width: 100%;
+    
 }
 
-.alignleft {
-	float:left;
-	margin: 0 10px 5px 0;
+#about .bio {
+    max-width: 400px;
 }
 
-/************ typography *************/
-
-h1, h2, h3 {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 300;
-	margin-bottom:.5em;
-	letter-spacing: .1em;
-}
-
-h1 {
-	font-size: 200%;
-}
-
-h2 {
-	font-size: 120%;
-	padding-bottom: 2%;
-	border-bottom: 0.5px solid #999999;
-}
-
-header h1 {
-	font-size: 400%;
-	margin-bottom:.1em;
-}
-
-header h2, #pfp_caption {
+#pfp_caption {
 	color: #999999;
 }
 
-header h2:hover {
-	transition: 0.3s ease-in-out;
-	color: #000000;
+.container-left { grid-column-start: 1; }
+.container-right { grid-column-start: 2; }
+
+
+/************* WORKS PAGE STYLING **************/
+
+#works {
+    display: block;
+}
+
+.work-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 1em;
+}
+
+.work-item img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.work-item .left {
+    margin-right: 1em;
+}
+
+.work-item .right {
+    margin-left: 1em;
+}
+
+
+/************ TYPOGRAPHY STYLING *************/
+
+h1, h2, h3 {
+    color: #000000c2;
+    font-weight: 400;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 180%;
+}
+
+h2 {
+    font-size: 130%;
+    font-weight: 600;
 }
 
 p {
@@ -108,44 +209,172 @@ ul {
 
 ul li {
 	margin-bottom:.5em;
-}
-
-strong {
-	font-weight:400;
+	margin-left: 5ch;
 }
 
 a {
-	text-decoration:none;
-	color:#666666;
+    text-decoration:none;
+	color:#00000088;
 }
 
 a:hover {
-	transition: 0.3s ease-in;
-	color: #ffffff;
-	background-color: rgb(255, 218, 132);
+	transition: 0.3s all ease-in-out;
+	color: rgb(56, 56, 56, 1);
+	
+}
+
+#navbar a.active {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+/************ MEDIA QUERIES *************/
+
+@media only screen and (min-width: 2001px) {
+    #intro img {
+        max-width: 1280px;
+        max-height: 600px;
+    }
+    #page1, .page {
+        max-width: 1600px;
+    }
+
+    header {
+        padding: 0.5em;
+        font-size: 1.3em;
+        max-width: 1600px;
+    }
+
+    body {
+        font-size: 1.6em;
+    }
+}
+
+@media only screen and (max-width: 2000px) {
+    #intro img {
+        max-width: 800px;
+    }
 }
 
 @media only screen and (max-width: 980px) {
-	
-	#page { width: 100%; }
-	
+    #intro img {
+        max-width: 85%;
+    }
+    #works img {
+        width: 300px;
+        height: 225px;
+    }
 }
 
 @media only screen and (max-width: 550px) {
-	
-	#about, #projects, #skills {
-		float:none;
-		width:100%;
-	}
-	
-}
-	
-#pfp {
-	box-sizing: border-box;
-	padding: 4% 4% 12% 4%;
-	border: 2px solid whitesmoke;
+    .page {
+        display: grid;
+    }
+    footer {
+        margin-top: 5ch;
+    }
+    #about .container-left {
+        grid-row: 1;
+        grid-column: 1/3;
+    }
+    #about .container-right {
+        grid-row: 2;
+        grid-column: 1/3;
+    }
+    #intro img {
+        max-width: 90vw;
+    }
+    .work-item {
+        display: block;
+    }
 }
 
+/************ INTRO PAGE STYLING *************/
+
+#intro {
+    display: block;
+    margin: auto;
+}
+
+#intro img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.align-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.align-left {
+    display: flex;
+    justify-content: flex-start;
+}
+
+/************* SCROLLER STYLING **************/
+/* Source: https://codepen.io/kowlor/pen/KKpaXLm */
+
+#scroller {
+    color: #777777;
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 2ch;
+    padding-right: 8ch;
+    max-height: 20%;
+    font-family: 'Avenir', sans-serif;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+          align-items: center;
+    -webkit-box-pack: center;
+     justify-content: center;
+}
+
+#scroller p {
+    text-transform: uppercase;
+}
+
+#scroller:hover {
+    cursor: default;
+    transition: all 0.5s ease-in;
+    color: black;
+}
+
+.small {
+    -webkit-animation: linear 15s rotate infinite;
+            animation: linear 15s rotate infinite;
+}
+
+.medium {
+    -webkit-animation: linear 30s rotate reverse infinite;
+            animation: linear 30s rotate reverse infinite;
+}
+
+/************* SCROLLER ANIMATION **************/
+
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotateZ(0deg);
+                transform: rotateZ(0deg);
+    }
+    to {
+        -webkit-transform: rotateZ(360deg);
+                transform: rotateZ(360deg);
+    }
+}
+
+@keyframes rotate {
+    from {
+        -webkit-transform: rotateZ(0deg);
+                transform: rotateZ(0deg);
+    }
+    to {
+        -webkit-transform: rotateZ(360deg);
+                transform: rotateZ(360deg);
+    }
+}
+
+/************* PAGE FADE IN/OUT **************/
 /* Source: https://christopheraue.net/design/fading-pages-on-load-and-unload */
 
 #fader {
@@ -157,8 +386,7 @@ a:hover {
 	z-index: 999999;
 	pointer-events: none;
 	background: white;
-	animation-duration: 1.6s;
-    animation-timing-function: ease-in-out;
+    animation: 0.8s ease-in-out;
 }
 
 @keyframes fade-out {
@@ -180,3 +408,57 @@ a:hover {
     opacity: 1;
     animation-name: fade-in;
 }
+
+/*************** SOCIAL LINKS STYLING **************/
+
+#social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#social-links a {
+    margin-left: 1.3ch;
+    margin-right: 1.3ch;
+}
+
+.svg {
+    height: 25px;
+    width: 25px;
+}
+
+#copyright {
+    letter-spacing: 0.06em;
+    color: #686868;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.subtext {
+    font-size: 0.8em;
+    font-style: italic;
+    opacity: 0.5;
+}
+
+.zoom {
+    transition: 0.2s ease-in;
+}
+.zoom:hover {
+    transform: scale(1.2);
+}
+
+.shrink {
+    transition: 0.2s ease-in;
+
+}
+
+.shrink:hover {
+    transform: scale(0.97);
+    overflow: hidden;
+    opacity: 0.7;
+}
+
