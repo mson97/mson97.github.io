@@ -128,7 +128,6 @@ header {
 #img-about {
     margin: auto;
     display: block;
-    
 }
  
 #img-about img {
@@ -136,7 +135,6 @@ header {
     margin: auto;
     max-height: 75vh;
     max-width: 100%;
-    
 }
 
 #about .bio {
@@ -145,6 +143,10 @@ header {
 
 #pfp_caption {
 	color: #999999;
+}
+
+.bio a {
+    text-decoration: underline;
 }
 
 .container-left { grid-column-start: 1; }
