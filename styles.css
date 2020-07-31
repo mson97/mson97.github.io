@@ -22,6 +22,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 .offblue { background: #EBF0F3; }
 .offmint { background: #F1F3EB; }
 .offcream { background: #F9F5EE; }
+.offteal { background: #c1edf0c4 }
 
 body {
     display: block;
@@ -63,7 +64,7 @@ header, footer {
 }
 
 section {
-	padding: 20px 1em;
+	padding: 0 1em 20px 1em;
 	overflow:hidden;
 }
 
@@ -139,6 +140,7 @@ header {
 
 #about .bio {
     max-width: 400px;
+    margin: auto;
 }
 
 #pfp_caption {
@@ -147,6 +149,7 @@ header {
 
 .bio a {
     text-decoration: underline;
+    font-weight: bold;
 }
 
 .container-left { grid-column-start: 1; }
@@ -293,14 +296,25 @@ a:hover {
 /************ INTRO PAGE STYLING *************/
 
 #intro {
-    display: block;
+    display: inline-grid;
     margin: auto;
 }
 
 #intro img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
+    width: 150%;
+}
+
+.intro-logo {
+    grid-column-start: 1;
+}
+
+.intro-text {
+    margin: auto;
+    grid-column-start: 2;
+    font-size: 2.6em;
+    width: 80%;
 }
 
 .align-right {
@@ -311,6 +325,10 @@ a:hover {
 .align-left {
     display: flex;
     justify-content: flex-start;
+}
+
+.hilite {
+    background-color: cornflowerblue;
 }
 
 /************* SCROLLER STYLING **************/
@@ -411,6 +429,30 @@ a:hover {
     animation-name: fade-in;
 }
 
+/*************** MOVING LETTERS STYLING ***************/
+
+.ml11 {
+    font-size: 0.8em;
+  }
+  
+  .ml11 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+  }
+  
+  .ml11 .line1 { 
+    top: 0; 
+    left: 0;
+  }
+  
+  .ml11 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+
 /*************** SOCIAL LINKS STYLING **************/
 
 #social-links {
@@ -425,8 +467,8 @@ a:hover {
 }
 
 .svg {
-    height: 25px;
-    width: 25px;
+    height: 30px;
+    width: 30px;
 }
 
 #copyright {

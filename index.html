@@ -11,20 +11,22 @@
         gtag('config', 'UA-159911808-1');
     </script>
     <script src="https://kit.fontawesome.com/a00743592d.js" crossorigin="anonymous"></script>
+    <!-- Text Animation -->
+    <!-- Source: https://tobiasahlin.com/moving-letters/#11 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <meta charset="UTF-8">
     <title>Minhee Son</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Sen:700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/ico" href="./favicon.ico">
     <link href="styles.css" rel="stylesheet">
     <!-- Needed for mobile devices to not zoom out automatically-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
+<body class="offteal">
+    <!-- page fader -->
     <!-- Source: https://christopheraue.net/design/fading-pages-on-load-and-unload -->
     <svg id="fader"></svg>
-    <script src="./script.js"></script>
 
 	<div id="page1">
     
@@ -44,7 +46,19 @@
         </header>
 
         <div class="row2" id="intro">
-            <img src="images/info.jpeg">
+            <div class="intro-logo">
+                <img src="images/logo.png">
+            </div>
+            <div id="app" class="intro-text">
+                <p>👋 hello! i'm minhee.</p>
+                <p class="ml11">
+                    <span class="text-wrapper">
+                        <span class="letters">i'm an aspiring <span class="hilite">software engineer</span>, ux designer, and people person.</span>
+                    </span>
+                  </h1>
+                  
+                  
+            </div>
         </div>
 
         <div class="align-right">
@@ -74,5 +88,6 @@
     </footer>
 
     <script src="js/scroller.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
