@@ -55,6 +55,15 @@ body {
     padding-bottom: 20px;
 }
 
+#page2 {
+    grid-template-rows: 100px auto;
+}
+
+#page2 nav {
+    max-width: 980px;
+    margin: auto;
+}
+
 .row1 { grid-row-start: 1; }
 .row2 { grid-row-start: 2; }
 
@@ -76,7 +85,6 @@ footer {
 
 header {
     margin: auto 0;
-    max-width: 980px;
 }
 
 #navbar {
@@ -159,29 +167,41 @@ header {
 /************* WORKS PAGE STYLING **************/
 
 #works {
-    display: block;
+    max-width: 980px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .work-item {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin-bottom: 1em;
+    background-color: white;
+    margin: 1%;
+    width: 48%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
+.work-item div {
+    margin: auto;
+    display: block;
+}
 .work-item img {
-    width: 400px;
-    height: 300px;
+    width: 100%;
+    max-height: 300px;
     object-fit: cover;
-    border-radius: 10%;
+    margin: auto;
 }
 
-.work-item .left {
-    margin-right: 1em;
+.work-item-desc {
+    padding: 0.2em 1.3em;
 }
 
-.work-item .right {
-    margin-left: 1em;
+.works-title {
+    display: flex;
+    font-size: 300%;
+    font-weight: 400;
+    justify-content: center;
 }
 
 
@@ -256,18 +276,8 @@ a:hover {
 }
 
 @media only screen and (max-width: 2000px) {
-    #intro img {
-        max-width: 800px;
-    }
-}
-
-@media only screen and (max-width: 980px) {
-    #intro img {
-        max-width: 85%;
-    }
-    #works img {
-        width: 300px;
-        height: 225px;
+    div #intro img {
+        width: 180%;
     }
 }
 
@@ -286,11 +296,24 @@ a:hover {
         grid-row: 2;
         grid-column: 1/3;
     }
+    div.intro-logo {
+        grid-column-start: 2;
+    }
     #intro img {
-        max-width: 90vw;
+        max-width: 100%;
+    }
+    div.intro-text {
+        font-size: 200%;
+    }
+    #works {
+        flex-direction: column;
     }
     .work-item {
-        display: block;
+        width: 95%;
+        margin: 2%;
+    }
+    .works-title {
+        font-size: 200%;
     }
 }
 
@@ -304,7 +327,7 @@ a:hover {
 #intro img {
     display: block;
     margin: auto;
-    width: 150%;
+    width: 160%;
 }
 
 .intro-logo {
@@ -339,6 +362,7 @@ a:hover {
     color: #777777;
     position: fixed;
     bottom: 0;
+    right: 1%;
     padding-bottom: 2ch;
     padding-right: 8ch;
     max-height: 20%;
@@ -496,14 +520,18 @@ a:hover {
     transform: scale(1.2);
 }
 
-.shrink {
-    transition: 0.2s ease-in;
+.work-item  {
+    transition: 0.5s ease-in-out;
 
 }
 
-.shrink:hover {
-    transform: scale(0.97);
+/*.work-item:hover {
+    transform: scale(1.02);
     overflow: hidden;
     opacity: 0.7;
-}
+} */
 
+
+.work-item:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }

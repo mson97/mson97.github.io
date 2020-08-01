@@ -10,7 +10,9 @@
 
         gtag('config', 'UA-159911808-1');
     </script>
-
+    <!-- Text Animation -->
+    <!-- Source: https://tobiasahlin.com/moving-letters/#11 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <meta charset="UTF-8">
     <!-- Needed for mobile devices to not zoom out automatically-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,7 +27,7 @@
     <svg id="fader"></svg>
     <script src="./script.js"></script>
 
-	<div class="page">
+	<div id="page2" class="page">
     
    	  <header class="row1">
             <nav>
@@ -44,58 +46,70 @@
 
         <div class="row2">
         	<div id="works-skills">
+                <div id="app" class="works-title">
+                    <p></p>
+                    <p class="ml11">
+                        <span class="text-wrapper">
+                            👇
+                            <span class="letters"> here is some of my work</span>
+                        </span>
+                    </p>
+                </div>
   
                 <div id="works" class="container-left">
                  
-                    <div id="iet" class="work-item">
-                        <div class="left">
-                            <a href="https://iet.ucdavis.edu/"><img src="images/iet.png" alt="ucdavis iet" class="shrink"></a>
-                        </div>
-                        <div class="right">
-                            <a href="https://iet.ucdavis.edu/"><h2 class="shrink">UC Davis IET</h2></a>
-                            <p class="subtext">JUNE 2019 - PRESENT : DEVELOPER</p>
-                            <p>Desigining custom web applications using HTML, CSS, AngularJS, and JavaScript. Developing & maintaining UC Davis ServiceNow platform through agile scrum process.</p>
+                    <div id="iet" class="work-item box-shadow-1">
+                        <div>
+                            <a href="https://iet.ucdavis.edu/"><img src="images/iet.png" alt="ucdavis iet"></a>
+                            <div class="work-item-desc">
+                                <a href="https://iet.ucdavis.edu/"><h2 >UC Davis IET</h2></a>
+                                <p class="subtext">JUNE 2019 - PRESENT : DEVELOPER</p>
+                                <p>Desigining custom web applications using HTML, CSS, AngularJS, and JavaScript. Developing & maintaining UC Davis ServiceNow platform through agile scrum process.</p>
+                            </div>
                         </div>
                     </div>
+
                     <div id="mind" class="work-item">
-                        <div class="left">
-                            <a href="https://health.ucdavis.edu/mindinstitute/"><img src="images/ucdmind.png" alt="ucdavis mind" class="shrink"></a>
-                        </div>
-                        <div class="right">
-                            <a href="https://health.ucdavis.edu/mindinstitute/"><h2 class="shrink">UC Davis MIND Institute</h2></a>
-                            <p class="subtext">OCTOBER 2018 - SEPTEMBER 2019 : RESEARCH ASST</p>
-                            <p>Computational psychology research for Attention, Impulsivility, and Regulation (AIR) Lab under Julie Schweitzer. fMRI processing to normalize and evaluate brain scans.</p>
+                        <div >
+                            <a href="https://health.ucdavis.edu/mindinstitute/"><img src="images/ucdmind.png" alt="ucdavis mind"></a>
+                            <div class="work-item-desc">
+                                <a href="https://health.ucdavis.edu/mindinstitute/"><h2 >UC Davis MIND Institute</h2></a>
+                                <p class="subtext">OCTOBER 2018 - SEPTEMBER 2019 : RESEARCH ASST</p>
+                                <p>Computational psychology research for Attention, Impulsivility, and Regulation (AIR) Lab under Julie Schweitzer. fMRI processing to normalize and evaluate brain scans.</p>
+                            </div>
                         </div>
                     </div>
+
                     <div id="dose" class="work-item">
-                        <div class="left">
-                            <a href="des157-wi20/final/index.html"><img src="images/dose.png" alt="dose" class="shrink"></a>
-                        </div>
-                        <div class="right">
-                            <a href="des157-wi20/final/index.html"><h2 class="shrink">DOSE</h2></a>
-                            <p class="subtext">JANUARY - MARCH 2020 : COURSE FINAL </p>
-                            <p>Browser-based interactive exploration of issues related to technology and humanity. Provide insight into technology overuse and emphasize significance of personal time through engaging storytelling.</p>
-                        </div>
-                    </div>
-                    <div id="foodprint" class="work-item">
-                        <div class="left">
-                            <a href="foodprint/index.html"><img src="images/foodprint2.jpg" alt="foodprint" class="shrink"></a>
-                        </div>
-                        <div class="right">
-                            <a href="foodprint/index.html"><h2 class="shrink">Foodprint (iOS)</h2></a>
-                            <p class="subtext">MARCH 2019 : HACKATHON PROJECT</p>
-                            <p>App to address water scarcity by providing consumers with water usage of products. Winner of HackDavis 2019: Best Beginner Hack.</p>
+                        <div >
+                            <a href="des157-wi20/final/index.html"><img src="images/dose.png" alt="dose" ></a>
+                            <div class="work-item-desc">
+                                <a href="des157-wi20/final/index.html"><h2 >DOSE</h2></a>
+                                <p class="subtext">JANUARY - MARCH 2020 : COURSE FINAL </p>
+                                <p>Browser-based interactive exploration of issues related to technology and humanity. Provide insight into technology overuse and emphasize significance of personal time through engaging storytelling.</p>
+                            </div>
                         </div>
                     </div>
 
                     <div id="foodprint" class="work-item">
-                        <div class="left">
-                            <a href="#"><img src="images/portfolio.gif" alt="portfolio"></a>
+                        <div >
+                            <a href="foodprint/index.html"><img src="images/foodprint2.jpg" alt="foodprint" ></a>
+                            <div class="work-item-desc">
+                                <a href="foodprint/index.html"><h2 >Foodprint (iOS)</h2></a>
+                                <p class="subtext">MARCH 2019 : HACKATHON PROJECT</p>
+                                <p>App to address water scarcity by providing consumers with water usage of products. Winner of HackDavis 2019: Best Beginner Hack.</p>
+                            </div>
                         </div>
-                        <div class="right">
-                            <a href="#"><h2 class="shrink">Personal Website</h2></a>
-                            <p class="subtext">JANUARY 2019 - PRESENT : PERSONAL PROJECT</p>
-                            <p>Personal portfolio webpage. Created from scratch-no Squarespace, Wix, or Website builder. Using HTML, CSS, and JS. Tools and inspiration include Figma, Codepen, and <a href="https://www.awwwards.com/">awwards</a>.</p>
+                    </div>
+
+                    <div id="foodprint" class="work-item">
+                        <div >
+                            <a href="#"><img src="images/portfolio.gif" alt="portfolio"></a>
+                            <div class="work-item-desc">
+                                <a href="#"><h2>Personal Website</h2></a>
+                                <p class="subtext">JANUARY 2019 - PRESENT : PERSONAL PROJECT</p>
+                                <p>Personal portfolio webpage. Created from scratch-no Squarespace, Wix, or Website builder. Using HTML, CSS, and JS. Tools and inspiration include Figma, Codepen, and <a href="https://www.awwwards.com/">awwards</a>.</p>
+                            </div>
                         </div>
                     </div>
 
@@ -141,7 +155,7 @@
         <section id="social-links">
             <a href="mailto:&#109;&#104;&#115;&#111;&#110;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">
                 <img src="images/gmail.svg" class="svg zoom"></a>
-            <a href="https://www.linkedin.com/in/minhee-son-1a1170154/">
+            <a href="https://www.linkedin.com/in/minheeson/">
                 <img src="images/linkedin.svg" class="svg zoom"></a>
             <a href="https://github.com/mson97">
                 <img src="images/github.svg" class="svg zoom"></a>
@@ -154,6 +168,7 @@
         </section>
     </footer>
 
+    <script src="js/animatetext.js"></script>
     <script src="js/scroller.js"></script>
 </body>
 </html>
