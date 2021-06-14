@@ -1,3 +1,4 @@
 # Minhee Son
-Welcome to my page
-minhee.me
+Welcome to personal portfolio and website!
+Check it out below:
+minhee.site
